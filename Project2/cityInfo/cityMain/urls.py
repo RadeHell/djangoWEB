@@ -7,7 +7,6 @@ urlpatterns = [
     path('cityAdministration/', views.cityAdministration , name='cityAdministration'),
     path('cityFacts/', views.cityFacts , name='cityFacts'),
     path('cityContacts/', views.cityContacts , name='cityContacts'),
-    path('cityHistory/', views.cityHistory , name='cityHistory')
-   
-
+    path('cityHistory/', views.cityHistory , name='cityHistory'),
+    path('<path:invalid_path>', views.handle_invalid_path, name='handle_invalid_path')
 ]

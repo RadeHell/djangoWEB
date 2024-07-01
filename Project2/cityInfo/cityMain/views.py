@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.template import loader
+from django.shortcuts import render
 
 def cityMain(request):
   template = loader.get_template('cityMain.html')
@@ -24,3 +25,6 @@ def cityContacts(request):
 def cityHistory(request):
   template = loader.get_template('cityHistory.html')
   return HttpResponse(template.render())
+
+def handle_invalid_path(request, invalid_path):
+    return render(request, '404.html')
