@@ -1,6 +1,6 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{% url 'Main' %}">Main</a>
+        <a class="navbar-brand" href="{% url 'cityMain' %}">Main</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,15 +8,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'newPage' %}">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'cityNews' %}">City News <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'News' %}">News</a>
+              <a class="nav-link" href="{% url 'cityAdministration' %}">City Administration</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="{% url 'CompMgm' %}"  role="button">
-                Company Management
-              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'cityFacts' %}">City Facts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'cityContacts' %}"> Contact phone numbers of municipal services </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'cityHistory' %}"> History </a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">

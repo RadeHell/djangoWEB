@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
-    path('', include('cityMain.urls')),
-    path('admin/', admin.site.urls)
+    #path('', RedirectView.as_view(url='/cityMain/', permanent=True))
+    path('admin/', admin.site.urls),
+    path('', include('cityMain.urls'))
+    
 ]

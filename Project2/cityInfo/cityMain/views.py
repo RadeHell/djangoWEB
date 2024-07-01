@@ -20,3 +20,7 @@ def cityFacts(request):
 def cityContacts(request):
   template = loader.get_template('cityContacts.html')
   return HttpResponse(template.render())
+
+def cityHistory(request):
+  template = loader.get_template('cityHistory.html')
+  return HttpResponse(template.render())
