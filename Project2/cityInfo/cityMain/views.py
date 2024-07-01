@@ -17,6 +17,6 @@ def cityFacts(request):
   template = loader.get_template('cityFacts.html')
   return HttpResponse(template.render())
 
-  def cityContacts(request):
+def cityContacts(request):
   template = loader.get_template('cityContacts.html')
   return HttpResponse(template.render())
