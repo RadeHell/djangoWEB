@@ -1,10 +1,20 @@
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
+from .models import city
 
 def cityMain(request):
-  template = loader.get_template('cityMain.html')
-  return HttpResponse(template.render())
+  city = City.objects.first()
+  return render(request, 'cityMain.html', {'city': member})
+  
+  #template = loader.get_template('cityMain.html')
+  #return HttpResponse(template.render())
+
+  def main_page(request):
+    # Get the first city in the database
+    city = City.objects.first()
+    return render(request, 'main_page.html', {'city': city})
+
 
 def cityNews(request):
   template = loader.get_template('cityNews.html')
